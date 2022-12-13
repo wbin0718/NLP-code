@@ -13,4 +13,11 @@ Encoder 모델을 활용하여 NLP task를 코드로 구현했습니다.
 make setup
 ```
 
-### 2. 
+### 2. Implementation
+
+```bash
+git clone ~~
+ls N2N
+python3 train.py
+```
+

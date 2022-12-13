@@ -2,27 +2,6 @@
 
 Template repository for Python project
 
-## 🚀 Features
-
-### Code Quality
-
-- black
-- isort
-- flake8
-- editorconfig
-
-### Github Actions
-
-- [release-drafter](https://github.com/release-drafter/release-drafter)
-- Check code quality when PR (`black`, `isort`, `flake8`)
-
-### Other
-
-- Commit template
-- Issue, PR Template
-- Add dummy test code
-- Auto-close stale issue
-
 ## 📄 Guideline
 
 ### 1. Setup

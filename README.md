@@ -17,7 +17,7 @@ make setup
 
 ```bash
 git clone https://github.com/wbin0718/NLP-code.git
-ls N2N
+ls ${N2N}
 python3 train.py
 ```
 

@@ -2,8 +2,6 @@ clean: clean-pyc clean-test
 quality: set-style-dep check-quality
 style: set-style-dep set-style
 setup: set-precommit set-style-dep set-test-dep set-git set-dev
-test: set-test-dep set-test
-
 
 ##### basic #####
 set-git:
@@ -21,9 +19,6 @@ set-precommit:
 
 set-dev:
 	pip3 install -r requirements.txt
-
-set-test:
-	python3 -m pytest tests/
 
 set-style:
 	black --config pyproject.toml .

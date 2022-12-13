@@ -1,0 +1,30 @@
+path:
+    train_path : ./data/KLUE/klue_benchmark//klue-dp-v1.1/klue-dp-v1.1_train.tsv
+    valid_path : ./data/KLUE/klue_benchmark/klue-dp-v1.1/klue-dp-v1.1_dev.tsv
+    test_path : ./data/KLUE/klue_benchmark/klue-dp-v1.1/klue-dp-v1.1_dev.tsv
+
+data:
+    shuffle: True
+    max_len : 512
+    
+model:
+    model_name: bert-base-multilingual-cased
+    saved_name: base_model
+    num_labels : 76
+    max_len : 512
+
+train:
+    seed: 42
+    batch_size: 32
+    max_epoch: 1
+    learning_rate: 1e-5
+    logging_step: 1
+    output_dir : ./saved
+    load_best_model_at_end : True
+    evaluation_strategy : epoch
+    save_strategy : epoch
+    logging_strategy : steps
+    logging_steps : 100
+  
+test:
+    best_model: ./saved/model.pt

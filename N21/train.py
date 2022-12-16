@@ -30,6 +30,9 @@ if __name__ == '__main__':
     config.num_labels = 7
     model = BertForSequenceClassification.from_pretrained(cfg.model.model_name, config = config)
 
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu") 
+    model = model.to(device)
+
     train_dataset = Dataset(train_df , train_dataset["label"])
     valid_dataset = Dataset(valid_df , valid_dataset["label"])
     test_dataset = Dataset(test_df, test_dataset["label"])

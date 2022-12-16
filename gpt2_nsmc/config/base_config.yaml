@@ -1,0 +1,25 @@
+data:
+    shuffle: True
+    max_len : 512
+    
+model:
+    model_name: "skt/kogpt2-base-v2"
+    saved_name: base_model
+    max_len : 128
+
+train:
+    seed: 42
+    batch_size: 32
+    max_epoch: 1
+    learning_rate: 5e-5
+    logging_step: 1
+    output_dir : ./saved
+    load_best_model_at_end : True
+    evaluation_strategy : epoch
+    save_strategy : epoch
+    logging_strategy : steps
+    logging_steps : 100
+    fp16 : True
+  
+test:
+    best_model: ./saved/model.pt

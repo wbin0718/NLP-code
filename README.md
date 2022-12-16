@@ -13,11 +13,17 @@ Encoder 모델을 활용하여 NLP task를 코드로 구현했습니다.
 make setup
 ```
 
-### 2. Implementation
+### 2. Train
 
 ```bash
 git clone https://github.com/wbin0718/NLP-code.git
-ls N2N
+cd ${N2N}
 python3 train.py
+```
+
+### 2. Test
+
+```bash
+python3 test.py
 ```
 
